@@ -21,11 +21,19 @@ app.use(bodyParser.json());
     port: "3306"
 });*/
 
-const conn = mysql.createConnection({
+/*const conn = mysql.createConnection({
     host: "sql12.freesqldatabase.com",
     user: "sql12600722",
     password: "QEWCp47aWv",
     database: "sql12600722",
+    port: "3306"
+});*/
+
+const conn = mysql.createConnection({
+    host: "db4free.net",
+    user: "root00",
+    password: "#GnhW*!9g27$%tc#&%",
+    database: "codeaid",
     port: "3306"
 });
 
