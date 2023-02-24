@@ -5,6 +5,7 @@ const mysql = require('mysql');
 const request = require('request');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const port = process.env.PORT || 4000
 
 app.use(cors(
     {origin: "localhost:8080",credentials: true}
@@ -12,11 +13,19 @@ app.use(cors(
 
 app.use(bodyParser.json());
 
-const conn = mysql.createConnection({
+/*const conn = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "#GnhW*!9g27$%tc#&%",
     database: "codeaid",
+    port: "3306"
+});*/
+
+const conn = mysql.createConnection({
+    host: "sql12.freesqldatabase.com",
+    user: "sql12600722",
+    password: "QEWCp47aWv",
+    database: "sql12600722",
     port: "3306"
 });
 
@@ -126,6 +135,6 @@ app.post('/subjects/:subj/:ques',(req,res)=>{
     }
 });
 
-app.listen(4000,()=>{
+app.listen(port,()=>{
     console.log("App is listening on PORT 4000");
 })
