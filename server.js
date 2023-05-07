@@ -40,7 +40,7 @@ app.use(bodyParser.json());
 const conn = mysql.createConnection({
     host: "bwq55nufgkyo3jfrokkb-mysql.services.clever-cloud.com",
     user: "u71gidsmoszdrlzp",
-    password: "bwq55nufgkyo3jfrokkb",
+    password: "r7G32wOQuAuqLrCJLbtT",
     database: "bwq55nufgkyo3jfrokkb",
     port: "3306"
 });
