@@ -29,11 +29,19 @@ app.use(bodyParser.json());
     port: "3306"
 });*/
 
+// const conn = mysql.createConnection({
+//     host: "db4free.net",
+//     user: "root00",
+//     password: "#GnhW*!9g27$%tc#&%",
+//     database: "codeaid",
+//     port: "3306"
+// });
+
 const conn = mysql.createConnection({
-    host: "db4free.net",
-    user: "root00",
-    password: "#GnhW*!9g27$%tc#&%",
-    database: "codeaid",
+    host: "bwq55nufgkyo3jfrokkb-mysql.services.clever-cloud.com",
+    user: "u71gidsmoszdrlzp",
+    password: "bwq55nufgkyo3jfrokkb",
+    database: "bwq55nufgkyo3jfrokkb",
     port: "3306"
 });
 
