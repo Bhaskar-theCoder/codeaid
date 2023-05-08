@@ -98,7 +98,7 @@ app.post('/subjects',(req,res)=>{
 //Getting all questions of a subject
 app.post('/subjects/:subj',(req,res)=>{
     if(Object.keys(req.body).length==0){
-        var tname=req.params.subj.toLowerCase();
+        var tname=req.params.subj;
         conn.query("SELECT question_name FROM `"+tname+"`",async(err,result)=>{
             if(err) throw err;
             res.end(JSON.stringify(result));
@@ -109,7 +109,7 @@ app.post('/subjects/:subj',(req,res)=>{
         var ac = req.body.addcode;
         var ao = req.body.addoutput;
         if(aq&&ac&&ao){
-            var sname=req.params.subj.toLowerCase();
+            var sname=req.params.subj;
             conn.query("INSERT INTO `"+sname+"`(`question_name`,`code`,`output`,`created_by`,`created_at`) VALUES('"+aq+"','"+ac+"','"+ao+"','Bhaskar',current_timestamp())",async(err,result)=>{
                 if(err) throw err;
                 res.end("Question Added Successfully");
@@ -120,8 +120,8 @@ app.post('/subjects/:subj',(req,res)=>{
 
 
 app.post('/subjects/:subj/:ques',(req,res)=>{
-    var sname = req.params.subj.toLowerCase();
-    var qname = req.params.ques.toLowerCase();
+    var sname = req.params.subj;
+    var qname = req.params.ques;
     if(Object.keys(req.body).length==0){
     //Getting code and output of a question
     
