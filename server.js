@@ -52,6 +52,10 @@ conn.connect(async(err)=>{
 
 app.set("view engine","ejs");
 
+app.get('/',(req,res)=>{
+    res.send("<center><h1>Nothing here</h1></center>");
+})
+
 //Getting all Subjects
 app.post('/subjects',(req,res)=>{
     // res.setHeader("Access-Control-Allow-Origin", "*");
